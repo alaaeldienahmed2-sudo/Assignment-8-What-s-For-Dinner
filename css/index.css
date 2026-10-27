@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+:root {
+  --bs-primary: #f97316;
+  --bs-primary-rgb: 249, 115, 22;
+  --bs-primary-bg-subtle: #ffedd5;
+  --bs-primary-border-subtle: #fdba74;
+  --bs-body-font-family: 'Poppins', system-ui, sans-serif;
+}
+
+body { background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 50%, #fef9c3 100%); }
+
+
+.bg-brand { background: linear-gradient(135deg, #f97316, #ef4444); }
+.glass { backdrop-filter: blur(8px); }
+.bg-pink-subtle { background-color: #fce7f3; }
+.text-pink { color: #db2777; }
+
+.sz-24 { width: 1.5rem; height: 1.5rem; }
+.sz-32 { width: 2rem; height: 2rem; }
+.sz-40 { width: 2.5rem; height: 2.5rem; }
+.sz-44 { width: 2.75rem; height: 2.75rem; }
+.sz-48 { width: 3rem; height: 3rem; }
+
+/* Image column + hover zoom */
+.card-media { min-height: 380px; }
+@media (min-width: 992px) { .card-media { min-height: 720px; } }
+.cover-image { transition: transform .4s ease; }
+.recipe-card:hover .cover-image { transform: scale(1.02); }
+
+/* Hovers */
+.hover-grow { cursor: pointer; transition: transform .2s ease; }
+.hover-grow:hover { transform: scale(1.05); }
+.btn-nav, .btn-soft, .btn-brand { transition: all .2s ease; }
+.btn-nav { --bs-btn-color: #6b7280; --bs-btn-hover-color: #f97316; --bs-btn-active-color: #f97316; }
+.btn-nav:hover { transform: translateY(-1px); }
+.btn-soft {
+  --bs-btn-color: #f97316; --bs-btn-bg: #ffedd5;
+  --bs-btn-hover-color: #ea580c; --bs-btn-hover-bg: #fed7aa;
+  --bs-btn-active-color: #ea580c; --bs-btn-active-bg: #fed7aa;
+}
+.btn-soft:hover { transform: scale(1.05); }
+.btn-brand {
+  --bs-btn-color: #fff; --bs-btn-hover-color: #fff; --bs-btn-active-color: #fff;
+  background: linear-gradient(135deg, #f97316, #ef4444);
+  box-shadow: 0 4px 14px rgba(249, 115, 22, .35);
+}
+.btn-brand:hover {
+  background: linear-gradient(135deg, #ea580c, #dc2626);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(249, 115, 22, .45);
+}
+.btn-brand:active { transform: none; }
+
+/* Tabs */
+.nav-underline {
+  --bs-nav-link-color: #6b7280;
+  --bs-nav-link-hover-color: #f97316;
+  --bs-nav-underline-link-active-color: #f97316;
+}
+.tab-content {
+  min-height: 300px;
+  max-height: 330px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #fdba74 #f1f1f1;
+}
